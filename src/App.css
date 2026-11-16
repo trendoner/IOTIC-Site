@@ -1223,6 +1223,127 @@
 .global-footer-column a, .global-footer-column small { color: rgba(245,247,251,.76); font-size: .78rem; text-decoration: none; }
 .global-footer-column a:hover { color: #fff; }
 .global-footer-column small { margin-top: .8rem; color: rgba(245,247,251,.42); }
+
+/* Visual polish */
+.app-shell {
+	background:
+		radial-gradient(circle at 78% 12%, rgba(75, 92, 118, 0.16), transparent 24rem),
+		radial-gradient(circle at 12% 68%, rgba(255, 152, 77, 0.045), transparent 28rem),
+		#000;
+}
+
+.topbar {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	background: linear-gradient(180deg, rgba(3, 3, 4, 0.9), rgba(3, 3, 4, 0.48));
+	backdrop-filter: blur(16px);
+}
+
+.hero h1 {
+	text-shadow: 0 0 2.5rem rgba(255, 255, 255, 0.08);
+}
+
+.primary-action,
+.secondary-action {
+	border-radius: 0.55rem;
+}
+
+.primary-action {
+	box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.28);
+}
+
+.primary-action:hover,
+.secondary-action:hover {
+	box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.24);
+}
+
+.capabilities,
+.showcase,
+.mission-panel,
+.about-section,
+.team-section,
+.contact-section,
+.updates-preview {
+	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.22);
+}
+
+.capability-card,
+.team-card,
+.contact-details div {
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.section-heading h2,
+.showcase-copy h2,
+.mission-panel h2,
+.team-heading h2,
+.contact-copy h2,
+.about-heading h2 {
+	text-wrap: balance;
+}
+
+.hero {
+	isolation: isolate;
+	overflow: hidden;
+}
+
+.hero::before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width: 42rem;
+	height: 42rem;
+	right: -12rem;
+	top: 3rem;
+	border-radius: 50%;
+	background: radial-gradient(circle, rgba(103, 119, 145, 0.18), rgba(103, 119, 145, 0) 68%);
+	filter: blur(8px);
+	pointer-events: none;
+}
+
+.hero-visual {
+	position: relative;
+}
+
+.hero-visual::after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width: min(32rem, 80%);
+	aspect-ratio: 1;
+	border: 1px solid rgba(220, 228, 244, 0.16);
+	border-radius: 50%;
+	transform: rotate(-18deg) scaleY(0.32);
+	box-shadow: 0 0 2.5rem rgba(220, 228, 244, 0.08);
+	pointer-events: none;
+}
+
+.nav a:focus-visible,
+.nav-menu-button:focus-visible,
+.nav-recruitment-cta:focus-visible,
+.primary-action:focus-visible,
+.secondary-action:focus-visible,
+.text-link:focus-visible,
+.contact-link:focus-visible,
+.global-footer a:focus-visible {
+	outline: 2px solid #ffb27a;
+	outline-offset: 4px;
+}
+
+.nav-dropdown-panel {
+	backdrop-filter: blur(18px);
+}
+
+.capability-card,
+.moon-goal-roadmap li,
+.contact-details div {
+	transition: transform 220ms ease, border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
+}
+
+.capability-card:hover,
+.moon-goal-roadmap li:hover,
+.contact-details div:hover {
+	box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.22);
+}
 @media (max-width: 850px) {
   .nav-toggle { display: inline-flex; justify-self: end; }
   .topbar { grid-template-columns: auto auto 1fr; padding: 1rem; }
