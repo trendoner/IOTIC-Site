@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom'
 import './RecruitmentPage.css'
 
 const GOOGLE_FORM_PLACEHOLDER_URL = 'https://forms.gle/YPwpHYb7K1RxbGF29'
-const HERO_IMAGE_CDN_URL =
-    'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1600&q=80'
+const HERO_IMAGE_CDN_URL = '/engine.png'
 
 const roles = [
     {
@@ -111,15 +110,14 @@ function RecruitmentPage() {
                 }}
             >
                 <div className="recruitment-hero-copy">
-                    <p className="recruitment-kicker">IOTIC Space Recruitment</p>
-                    <h1>Team Roles & Requirements</h1>
+                    <p className="recruitment-kicker">Recruitment</p>
+                    <h1>Open roles</h1>
                     <p className="recruitment-intro">
-                        Join us in building propulsion and flight capability from the ground up. Explore open roles below
-                        and apply using the form link.
+                        Roles in propulsion, flight systems, avionics, manufacturing, and operations.
                     </p>
 
                     <a className="apply-cta" href={GOOGLE_FORM_PLACEHOLDER_URL} target="_blank" rel="noreferrer">
-                        Apply via Google Form
+                        Apply
                     </a>
                 </div>
             </section>
@@ -156,9 +154,9 @@ function RecruitmentPage() {
             </main>
 
             <footer className="recruitment-footer">
-                <p>Ready to contribute to real aerospace engineering work?</p>
+                <p>Apply to join the team.</p>
                 <a className="apply-cta" href={GOOGLE_FORM_PLACEHOLDER_URL} target="_blank" rel="noreferrer">
-                    Submit Application
+                    Apply
                 </a>
             </footer>
         </div>

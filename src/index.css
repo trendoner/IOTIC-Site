@@ -43,3 +43,13 @@ video {
 #root {
 	min-height: 100vh;
 }
+
+.project-page,
+.insights-page,
+.recruitment-page {
+	background-image:
+		url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='380' viewBox='0 0 520 380'%3E%3Cg fill='%23fff'%3E%3Ccircle cx='23' cy='42' r='1' opacity='.28'/%3E%3Ccircle cx='87' cy='181' r='.7' opacity='.42'/%3E%3Ccircle cx='144' cy='63' r='.8' opacity='.2'/%3E%3Ccircle cx='191' cy='292' r='1.1' opacity='.34'/%3E%3Ccircle cx='247' cy='128' r='.7' opacity='.3'/%3E%3Ccircle cx='316' cy='37' r='1' opacity='.25'/%3E%3Ccircle cx='362' cy='224' r='.7' opacity='.38'/%3E%3Ccircle cx='408' cy='96' r='1.2' opacity='.22'/%3E%3Ccircle cx='471' cy='314' r='.8' opacity='.35'/%3E%3Ccircle cx='498' cy='157' r='.6' opacity='.3'/%3E%3Ccircle cx='56' cy='337' r='.6' opacity='.32'/%3E%3Ccircle cx='126' cy='246' r='.5' opacity='.22'/%3E%3Ccircle cx='278' cy='344' r='.8' opacity='.26'/%3E%3Ccircle cx='337' cy='169' r='.6' opacity='.3'/%3E%3Ccircle cx='438' cy='260' r='.5' opacity='.4'/%3E%3C/g%3E%3C/svg%3E");
+	background-repeat: repeat;
+	background-size: 520px 380px;
+	background-position: 0 0;
+}

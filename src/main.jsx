@@ -4,6 +4,8 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import RecruitmentPage from './RecruitmentPage.jsx'
+import ProjectPage from './ProjectPage.jsx'
+import InsightsPage from './InsightsPage.jsx'
 
 
 const router = createBrowserRouter([
@@ -14,6 +16,22 @@ const router = createBrowserRouter([
   {
     path: '/recruitment',
     element: <RecruitmentPage/>
+  }
+  ,{
+    path: '/technology/:projectId',
+    element: <ProjectPage/>
+  },
+  {
+    path: '/development-log',
+    element: <InsightsPage mode="updates" />
+  },
+  {
+    path: '/timeline',
+    element: <InsightsPage mode="updates" />
+  },
+  {
+    path: '/publications',
+    element: <InsightsPage mode="publications" />
   }
 ])
 

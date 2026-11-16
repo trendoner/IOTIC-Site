@@ -1,0 +1,38 @@
+.insights-page { position: relative; z-index: 1; padding: 2rem 3rem 4rem; }
+.insights-hero, .insights-tools, .insights-list, .test-archive { width: min(980px, 100%); margin: 0 auto 1.5rem; }
+.insights-hero { padding: 4rem 0 2rem; }
+.insights-hero h1 { max-width: 14ch; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: clamp(3rem, 7vw, 6rem); line-height: .9; letter-spacing: -.07em; }
+.insights-hero > p:last-child { max-width: 46rem; margin-top: 1.5rem; color: rgba(232,236,244,.78); line-height: 1.75; }
+.insights-tools { display: grid; gap: .8rem; }
+.insights-tools input { width: 100%; padding: .9rem 1rem; border: 1px solid rgba(255,255,255,.16); border-radius: .7rem; outline: none; background: rgba(255,255,255,.04); color: #f7f8fb; }
+.insights-tools input:focus { border-color: rgba(255,255,255,.6); }
+.insights-filters { display: flex; flex-wrap: wrap; gap: .5rem; }
+.insights-filters button { padding: .55rem .7rem; border: 1px solid rgba(255,255,255,.16); border-radius: 999px; background: transparent; color: rgba(245,247,251,.7); cursor: pointer; font-size: .7rem; }
+.insights-filters button.is-selected { background: #f7f8fb; color: #050505; }
+.insight-card, .test-archive { display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; padding: 1.4rem 0; border-top: 1px solid rgba(255,255,255,.16); }
+.insight-type { color: #ffbd8e; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; }
+.insight-card h2 { margin: .55rem 0 .55rem; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: clamp(1.4rem, 3vw, 2.1rem); letter-spacing: -.04em; }
+.insight-card p, .test-archive p:last-child { max-width: 54rem; margin: 0; color: rgba(232,236,244,.72); line-height: 1.65; }
+.insight-meta { display: grid; align-content: start; gap: .3rem; min-width: 10rem; color: rgba(245,247,251,.58); font-size: .7rem; text-align: right; text-transform: uppercase; letter-spacing: .07em; }
+.test-archive { display: block; margin-top: 2rem; padding: 1.5rem; border: 1px solid rgba(255,255,255,.14); border-radius: 1rem; background: rgba(10,10,12,.64); }
+.test-archive h2 { margin: 0 0 .8rem; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: clamp(1.8rem,4vw,3rem); letter-spacing: -.05em; }
+.empty-state { color: rgba(232,236,244,.6); }
+.development-timeline { position: relative; display: grid; gap: 0; }
+.development-timeline::before { content: ''; position: absolute; top: 1.4rem; bottom: 1.4rem; left: 1.25rem; width: 1px; background: linear-gradient(rgba(255,189,142,.7), rgba(255,255,255,.12)); }
+.timeline-entry { position: relative; display: grid; grid-template-columns: 2.5rem 1fr; gap: 1.25rem; padding: 1.4rem 0 1.6rem; }
+.timeline-marker { position: relative; z-index: 1; display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border: 1px solid rgba(255,189,142,.65); border-radius: 50%; background: #08080a; color: #ffbd8e; font-size: .7rem; letter-spacing: .08em; }
+.timeline-content { padding: 0 0 1.3rem; border-bottom: 1px solid rgba(255,255,255,.16); }
+.timeline-content .insight-meta { display: flex; flex-wrap: wrap; justify-content: space-between; min-width: 0; margin-bottom: .8rem; text-align: left; }
+.timeline-content h2 { margin-top: .55rem; }
+.publication-card { display: block; padding: 1.5rem; border: 1px solid rgba(255,255,255,.14); border-radius: 1rem; background: rgba(10,10,12,.64); }
+.publication-heading { margin-bottom: 1.5rem; }
+.publication-heading h2 { max-width: 50rem; margin: .55rem 0 .8rem; font-family: Georgia, serif; font-size: clamp(1.55rem, 3vw, 2.4rem); line-height: 1.12; letter-spacing: -.03em; }
+.publication-heading p { max-width: 58rem; margin: 0; color: rgba(232,236,244,.78); line-height: 1.7; }
+.publication-meta { padding: 0 0 1.3rem; border-bottom: 1px solid rgba(255,255,255,.13); }
+.publication-meta > span, .publication-body h3 { display: block; margin-bottom: .45rem; color: rgba(245,247,251,.55); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; }
+.publication-meta ul { margin: 0 0 1.2rem; padding-left: 1rem; color: rgba(232,236,244,.75); font-size: .82rem; line-height: 1.55; }
+.publication-meta p { margin: 0; color: rgba(232,236,244,.75); font-size: .82rem; line-height: 1.55; }
+.publication-body { padding-top: 1.3rem; }
+.publication-body h3:not(:first-child) { margin-top: 1.4rem; }
+.publication-body p { margin: 0; color: rgba(232,236,244,.75); font-size: .9rem; line-height: 1.7; }
+@media (max-width: 700px) { .insights-page { padding: 1rem; } .insights-hero { padding-top: 2rem; } .insight-card { grid-template-columns: 1fr; gap: .7rem; } .insight-meta { text-align: left; min-width: 0; } }
