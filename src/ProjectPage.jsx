@@ -35,7 +35,7 @@ const projects = {
       { label: 'Architecture and design', status: 'Completed · 17 Sep 2026' },
       { label: 'Manufacturing and integration', status: 'Completed · 17 Nov 2026' },
       { label: 'Instrumentation checkout', status: 'Scheduled · 28 Nov 2026' },
-      { label: 'Static fire campaign', status: 'In progress · starts 2 Dec 2026' },
+      { label: 'Static fire campaign', status: 'In progress · starts 15 Dec 2026' },
     ],
   },
   'flux-alpha': {
