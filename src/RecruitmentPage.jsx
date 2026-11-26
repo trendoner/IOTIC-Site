@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom'
 import './RecruitmentPage.css'
 
-const GOOGLE_FORM_PLACEHOLDER_URL = 'https://forms.gle/YPwpHYb7K1RxbGF29'
+const GOOGLE_FORM_URL = 'https://forms.gle/eVa9rTJSG6zTEJQk9'
 const HERO_IMAGE_CDN_URL = '/engine.png'
 
 const roles = [
     {
         title: 'Propulsion Engineer',
-        stream: '[Mechanical / Aerospace / Chemical]',
         work: [
             'CAD of engine components and related hardware',
             'Basic CFD / FEA for flow, thermal, or stress checks',
@@ -23,7 +22,6 @@ const roles = [
     },
     {
         title: 'Avionics Engineer',
-        stream: '[EE / ECE / CSE]',
         work: [
             'Work with sensors, wiring, and power distribution',
             'Use microcontrollers for data acquisition and control',
@@ -39,7 +37,6 @@ const roles = [
     },
     {
         title: 'Flight Systems Engineer',
-        stream: '[CSE / EE / Aerospace]',
         work: [
             'Write code for data logging and sensor handling',
             'Build basic simulations for flight / test analysis',
@@ -55,7 +52,6 @@ const roles = [
     },
     {
         title: 'Manufacturing Engineer',
-        stream: '[Metallurgy / Mechanical / Chemical]',
         work: [
             'Assist in material selection and fabrication planning',
             'Coordinate machining and hardware manufacturing',
@@ -71,7 +67,6 @@ const roles = [
     },
     {
         title: 'Operations & Documentation',
-        stream: '[1st Year / Any Branch]',
         work: [
             'Maintain technical documents and project records',
             'Prepare reports, presentations, and updates',
@@ -116,18 +111,18 @@ function RecruitmentPage() {
                         Roles in propulsion, flight systems, avionics, manufacturing, and operations.
                     </p>
 
-                    <a className="apply-cta" href={GOOGLE_FORM_PLACEHOLDER_URL} target="_blank" rel="noreferrer">
+                    <a className="apply-cta" href={GOOGLE_FORM_URL} target="_blank" rel="noreferrer">
                         Apply
                     </a>
                 </div>
             </section>
 
             <main className="roles-grid" aria-label="Open team roles">
-                {roles.map((role) => (
+                {roles.map((role, index) => (
                     <article className="role-card" key={role.title}>
                         <div className="role-heading">
+                            <span className="role-index">0{index + 1}</span>
                             <h2>{role.title}</h2>
-                            <p className="role-stream">{role.stream}</p>
                         </div>
 
                         <div className="role-columns">
@@ -155,7 +150,7 @@ function RecruitmentPage() {
 
             <footer className="recruitment-footer">
                 <p>Apply to join the team.</p>
-                <a className="apply-cta" href={GOOGLE_FORM_PLACEHOLDER_URL} target="_blank" rel="noreferrer">
+                <a className="apply-cta" href={GOOGLE_FORM_URL} target="_blank" rel="noreferrer">
                     Apply
                 </a>
             </footer>
