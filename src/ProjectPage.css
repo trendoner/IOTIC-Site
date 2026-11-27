@@ -5,8 +5,8 @@
 .project-intro { max-width: 38rem; color: rgba(232,236,244,.78); font-size: 1.1rem; line-height: 1.7; }
 .status-chip { display: inline-flex; padding: .45rem .7rem; border: 1px solid rgba(255,170,100,.45); border-radius: 999px; color: #ffbd8e; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; }
 .project-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.6rem; }
-.project-hero-image { margin: 0; padding: 1rem; border: 1px solid rgba(255,255,255,.14); border-radius: 1rem; background: rgba(255,255,255,.03); }
-.project-hero-image img { display: block; width: 100%; aspect-ratio: 1.2; object-fit: contain; background: #303846; border-radius: .65rem; }
+.project-hero-image { margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; }
+.project-hero-image img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: transparent; border-radius: .65rem; }
 .project-hero-image figcaption { margin-top: .7rem; color: rgba(232,236,244,.55); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; }
 .dossier-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
 .dossier-card, .project-milestones, .archive-note { padding: 1.5rem; border: 1px solid rgba(255,255,255,.13); border-radius: 1rem; background: rgba(10,10,12,.64); }
@@ -32,5 +32,5 @@
 .simulation-notes strong { display: block; margin-bottom: .25rem; color: #ffbd8e; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
 @media (max-width: 900px) { .technical-data-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 760px) { .project-page { padding: 1rem; } .project-hero, .project-milestones { grid-template-columns: 1fr; } .project-hero { min-height: auto; padding: 1.5rem 0 2rem; gap: 1.5rem; } .dossier-grid { grid-template-columns: 1fr; } .project-milestones li { grid-template-columns: 2rem 1fr; } .project-milestones li em { grid-column: 2; } }
-@media (max-width: 560px) { .project-hero h1 { font-size: clamp(3rem, 16vw, 4.2rem); } .project-hero-image { padding: .65rem; } .project-hero-image figcaption { font-size: .62rem; } }
+@media (max-width: 560px) { .project-hero h1 { font-size: clamp(3rem, 16vw, 4.2rem); } .project-hero-image figcaption { font-size: .62rem; } }
 @media (max-width: 560px) { .technical-data-grid { grid-template-columns: 1fr; } }
