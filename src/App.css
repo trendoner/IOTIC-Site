@@ -107,8 +107,7 @@
 .launch-chip span,
 .eyebrow,
 .card-index,
-.timeline span,
-.moon-caption span {
+.timeline span {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
@@ -187,16 +186,21 @@
 .hero {
 	display: grid;
 	grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.95fr);
-	align-items: center;
-	min-height: calc(100vh - 84px);
+	align-items: stretch;
+	min-height: calc(100vh - 84px + 1rem);
 	gap: 2rem;
 	padding: 2rem 3rem 3.5rem;
 }
 
 .hero-copy {
-	max-width: 44rem;
-	padding-top: 0;
-	transform: translateY(-1.4rem);
+	position: relative;
+	z-index: 1;
+	align-self: start;
+	width: 70rem;
+	max-width: none;
+	padding-top: 1rem;
+	background: transparent;
+	transform: translateY(-3rem);
 }
 
 .eyebrow {
@@ -218,7 +222,7 @@
 }
 
 .hero h1 {
-	max-width: 20ch;
+	max-width: none;
 	font-size: clamp(3.2rem, 6.5vw, 5.8rem);
 }
 
@@ -290,7 +294,7 @@
 .capability-card,
 .mission-panel,
 .showcase,
-.moon-frame {
+.trajectory-frame {
 	border: 1px solid rgba(255, 255, 255, 0.12);
 	background: rgba(7, 7, 8, 0.55);
 	backdrop-filter: blur(18px);
@@ -319,70 +323,37 @@
 
 .hero-visual {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: flex-start;
 	min-height: 42rem;
-	padding-top: 0;
+	padding-top: 15rem;
 }
 
-.moon-panel {
+.trajectory-panel {
 	position: relative;
-	width: min(100%, 36rem);
+	width: min(160%, 67.2rem);
+	flex: 0 0 min(160%, 67.2rem);
 }
 
-.moon-frame {
+.trajectory-frame {
 	position: relative;
 	width: 100%;
-	aspect-ratio: 0.86;
+	aspect-ratio: 1774 / 814;
 	border: 0;
 	border-radius: 0;
 	background: transparent;
 	box-shadow: none;
+	backdrop-filter: none;
 	overflow: hidden;
-	transform: translateY(-4rem);
+	transform: none;
 }
 
-.moon-video {
+.trajectory-image {
+	display: block;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
 	object-position: center;
-	filter: saturate(1.05) contrast(1.05);
-}
-
-.moon-sheen {
-	position: absolute;
-	inset: 0;
-	background:
-		linear-gradient(90deg, rgba(0, 0, 0, 0.08), transparent 35%),
-		radial-gradient(circle at 70% 22%, rgba(255, 255, 255, 0.16), transparent 26%),
-		linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.08) 100%);
-	mix-blend-mode: screen;
-	pointer-events: none;
-}
-
-.moon-caption {
-	position: absolute;
-	right: 1.4rem;
-	bottom: 1.4rem;
-	display: grid;
-	gap: 0.3rem;
-	padding: 0.9rem 1rem;
-	border: 1px solid rgba(255, 255, 255, 0.12);
-	border-radius: 0.85rem;
-	background: rgba(4, 4, 4, 0.55);
-	color: #f7f8fb;
-}
-
-.moon-caption span {
-	font-size: 0.6rem;
-	color: rgba(247, 248, 251, 0.65);
-}
-
-.moon-caption strong {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 1rem;
-	font-weight: 600;
 }
 
 .capabilities,
@@ -1391,7 +1362,7 @@
 		min-height: 34rem;
 	}
 
-	.moon-frame {
+	.trajectory-frame {
 		transform: none;
 	}
 
@@ -1484,7 +1455,7 @@
 		font-size: clamp(2.65rem, 13vw, 4rem);
 	}
 
-	.moon-frame {
+	.trajectory-frame {
 		width: 100%;
 		aspect-ratio: 0.92;
 	}
@@ -1625,35 +1596,8 @@
 	overflow: hidden;
 }
 
-.hero::before {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	width: 42rem;
-	height: 42rem;
-	right: -12rem;
-	top: 3rem;
-	border-radius: 50%;
-	background: radial-gradient(circle, rgba(103, 119, 145, 0.18), rgba(103, 119, 145, 0) 68%);
-	filter: blur(8px);
-	pointer-events: none;
-}
-
 .hero-visual {
 	position: relative;
-}
-
-.hero-visual::after {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	width: min(32rem, 80%);
-	aspect-ratio: 1;
-	border: 1px solid rgba(220, 228, 244, 0.16);
-	border-radius: 50%;
-	transform: rotate(-18deg) scaleY(0.32);
-	box-shadow: 0 0 2.5rem rgba(220, 228, 244, 0.08);
-	pointer-events: none;
 }
 
 .nav a:focus-visible,

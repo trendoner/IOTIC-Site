@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SiteChrome from './SiteChrome.jsx'
 import './App.css'
@@ -33,7 +33,6 @@ const getVectorTestCountdown = () => {
 }
 
 function App() {
-  const hasSetInitialVideoOffset = useRef(false)
   const [vectorTestCountdown, setVectorTestCountdown] = useState(getVectorTestCountdown)
   useEffect(() => {
     const elements = document.querySelectorAll('.reveal')
@@ -47,11 +46,9 @@ function App() {
     const timer = window.setInterval(updateCountdown, 1000)
     return () => window.clearInterval(timer)
   }, [])
-  const handleVideoMetadata = (event) => { if (!hasSetInitialVideoOffset.current) { event.currentTarget.currentTime = 2; hasSetInitialVideoOffset.current = true } }
-
   return <SiteChrome>
     <main id="home">
-      <section className="hero"><div className="hero-copy reveal is-visible"><h1>Engineering the first steps toward humanity’s next frontier.</h1></div><div className="hero-visual reveal is-visible" style={{ '--reveal-delay': '120ms' }}><div className="moon-panel"><div className="moon-frame"><video className="moon-video" src="/Moon%20Live%20Wallpaper_2160p.mp4" onLoadedMetadata={handleVideoMetadata} autoPlay loop muted playsInline preload="metadata" aria-label="Live moon wallpaper" /><div className="moon-sheen" /></div></div></div></section>
+      <section className="hero"><div className="hero-copy reveal is-visible"><h1>Engineering the first steps toward humanity’s next frontier.</h1></div><div className="hero-visual reveal is-visible" style={{ '--reveal-delay': '120ms' }}><div className="trajectory-panel"><div className="trajectory-frame"><img className="trajectory-image" src="/trajectory.jpg" alt="IOTIC Space orbital trajectory" /></div></div></div></section>
       <section className="upcoming-test reveal" id="upcoming-test"><div className="upcoming-test-copy"><p className="upcoming-test-badge"><span className="upcoming-test-pulse" />Upcoming Test</p><h2 id="upcoming-test-title">Vector Alpha</h2><p className="upcoming-test-text">An 8 kN solid motor static fire campaign.</p><p className="upcoming-test-countdown" aria-live="polite">{vectorTestCountdown.complete ? 'Test window reached' : <><span>T - </span><span>{String(vectorTestCountdown.days ?? 0).padStart(2, '0')}</span><span className="upcoming-test-countdown-unit">D</span><span>{String(vectorTestCountdown.hours ?? 0).padStart(2, '0')}</span><span className="upcoming-test-countdown-unit">H</span><span>{String(vectorTestCountdown.minutes ?? 0).padStart(2, '0')}</span><span className="upcoming-test-countdown-unit">M</span><span>{String(vectorTestCountdown.seconds ?? 0).padStart(2, '0')}</span><span className="upcoming-test-countdown-unit">S</span></>}</p></div><dl className="upcoming-test-specs"><div><dt>Test</dt><dd>Static Fire</dd></div><div><dt>Motor thrust</dt><dd>8 kN</dd></div><div><dt>Earliest test window</dt><dd>15 Dec 2026 · 3:00 PM IST</dd></div></dl></section>
       <section className="showcase vector-summary vector-summary--reverse reveal" id="vector-alpha-summary"><div className="showcase-visual"><img src="/Vector%20Alpha/cad_ss.jpg" alt="Vector Alpha motor cutaway and internal architecture" loading="lazy" /></div><div className="showcase-copy"><p className="eyebrow">Vector Alpha · solid propulsion</p><h2>Vector Alpha <span className="showcase-year">(expected 2026)</span></h2><p>An 8 kN-class KNSU solid motor program focused on propulsion design, instrumentation, and static-fire testing.</p><div className="timeline"><div><strong>Propellant</strong><span>KNSU · potassium nitrate and sucrose.</span></div><div><strong>Motor class</strong><span>8 kN · program target.</span></div><div><strong>Current phase</strong><span>Static-fire campaign · starts 15 Dec 2026.</span></div></div><Link className="text-link" to="/technology/vector-alpha">View Vector Alpha →</Link></div></section>
       <section className="capabilities reveal" id="technology"><div className="section-heading"><p>Technology</p><h2>Real engineering capability first. Scale later.</h2></div><div className="capability-grid">{capabilities.map(([title, text], index) => <article className="capability-card" key={title}><span className="card-index">0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></section>
