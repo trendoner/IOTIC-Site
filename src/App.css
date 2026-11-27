@@ -187,7 +187,7 @@
 	display: grid;
 	grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.95fr);
 	align-items: stretch;
-	min-height: calc(100vh - 84px + 1rem);
+	min-height: 0;
 	gap: 2rem;
 	padding: 2rem 3rem 3.5rem;
 }
